@@ -5,8 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 <body>
-    
+    <div id="marital-status">
+        <ol>
+            <li>Single</li>
+            <li>Married</li>
+            <li>Do Not Share</li>
+        </ol>
+    </div>
+    <script>
+        let maritalStatus = document.getElementById("marital-status");
+        
+        let arryForRadio =["Single","Married","Do Not Share"];
+        
+        let h1 = document.createElement("h1");
+        maritalStatus.replaceChildren(h1);
+        h1.innerText=("Choose your Marital Status");
+        
+        for (let i = 0; i < arryForRadio.length; i++) {
+            let radio = document.createElement('input')
+            radio.type = "radio";
+            radio.name = "rd1";
+            let br = document.createElement('br')
+            maritalStatus.appendChild(radio);
+            radio.innerText=(arryForRadio[i]);
+            maritalStatus.appendChild(br);
+        }
+    </script>
 </body>
 </html>
